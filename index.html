@@ -3,41 +3,448 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Satish Pawar | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600&amp;display=swap');
+        
+        :root {
+            --primary: #2563eb;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .section-title {
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #2563eb;
+            bottom: -8px;
+            left: 0;
+        }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background: white;
+            border: 3px solid #2563eb;
+            border-radius: 50%;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-700">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">SP</div>
+                <h1 class="text-2xl font-semibold heading-font text-slate-800">Satish Pawar</h1>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
+                <a href="#education" class="hover:text-blue-600 transition-colors">Education</a>
+            </div>
+            <a href="#contact" 
+               class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-2xl text-sm font-semibold transition-all flex items-center gap-2">
+                <i class="fas fa-paper-plane"></i>
+                Contact
+            </a>
+        </div>
+    </nav>
 
-    <div class="container">
+    <!-- Hero Section -->
+    <header class="hero-bg text-white">
+        <div class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7">
+                <h2 class="text-5xl md:text-6xl font-bold heading-font leading-tight mb-6">
+                    Pawar Satish Radhakisan
+                </h2>
+                <p class="text-2xl mb-6 text-blue-100">Full Stack Developer</p>
+                <p class="text-lg max-w-lg text-blue-100 mb-8">
+                    Passionate IT professional with expertise in modern web technologies. 
+                    Building scalable, responsive, and user-friendly applications.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="mailto:Satishpawar373@gmail.com" 
+                       class="bg-white text-blue-700 hover:bg-blue-50 px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 transition-all">
+                        <i class="fas fa-envelope"></i>
+                        Email Me
+                    </a>
+                    <a href="tel:9850021435" 
+                       class="border border-white hover:bg-white/10 px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 transition-all">
+                        <i class="fas fa-phone"></i>
+                        +91 9850021435
+                    </a>
+                </div>
 
-        <div class="card">
+                <div class="mt-12 flex gap-8 text-sm">
+                    <div>
+                        <p class="text-blue-200">Current Role</p>
+                        <p class="font-semibold">Full Stack Developer at Orient Consultancy</p>
+                    </div>
+                    <div>
+                        <p class="text-blue-200">Location</p>
+                        <p class="font-semibold">Pune, Maharashtra</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profile Image -->
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative">
+                    <div class="w-80 h-80 bg-white/10 backdrop-blur-md rounded-3xl p-3 shadow-2xl border border-white/30">
+                        <img src="https://via.placeholder.com/400x400/1e40af/ffffff?text=Satish+Pawar" 
+                             alt="Satish Pawar" 
+                             class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-white text-slate-800 px-6 py-3 rounded-2xl shadow-xl flex items-center gap-3">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold">JS</div>
+                            <div class="w-8 h-8 bg-purple-500 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold">PHP</div>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500">5+ Years Exp</p>
+                            <p class="font-semibold">Web Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-            <img src="user.png" alt="Profile Photo">
+    <!-- Career Objective -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-12 gap-16">
+            <div class="md:col-span-4">
+                <h2 class="text-4xl font-semibold heading-font mb-4">Career Objective</h2>
+                <div class="h-1 w-16 bg-blue-600"></div>
+            </div>
+            <div class="md:col-span-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm">
+                    <p class="text-lg leading-relaxed">
+                        A self-motivated IT professional with strong knowledge and proficiency in JavaScript, HTML, CSS, PHP, 
+                        ASP.NET, WordPress, and mobile responsive web development. Seeking the position of Full Stack Developer 
+                        with a focus on writing clean, efficient, and maintainable code.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <h1>Satish R. Pawar</h1>
+    <!-- Skills -->
+    <section id="skills" class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Technical Skills</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Column 1 -->
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                            <i class="fas fa-laptop-code text-blue-600"></i>
+                            Programming &amp; Frameworks
+                        </h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">PHP</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">JavaScript</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">ASP.NET</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">C / C++</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                            <i class="fas fa-paint-brush text-blue-600"></i>
+                            Frontend
+                        </h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">HTML5</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">CSS3</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">jQuery</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
 
-            <p class="role">Frontend Beginner Developer</p>
+                <!-- Column 2 -->
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                            <i class="fas fa-database text-blue-600"></i>
+                            Databases
+                        </h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">MySQL</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">Microsoft Access</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">MSSQL</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                            <i class="fas fa-cube text-blue-600"></i>
+                            CMS &amp; Tools
+                        </h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">WordPress</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">Webflow</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">Shopify</span>
+                            <span class="bg-slate-100 px-5 py-2 rounded-3xl text-sm font-medium">Google Analytics</span>
+                        </div>
+                    </div>
+                </div>
 
-            <p class="about">
-                Hello! I am learning HTML, CSS, and responsive design.
-                I enjoy creating websites and improving my web development skills.
-            </p>
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                        <i class="fas fa-briefcase text-blue-600"></i>
+                        Other Skills
+                    </h4>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex gap-3 items-start">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Responsive Web Design</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Full Website Development Lifecycle</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Client-Server Applications</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Debugging &amp; Maintenance</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="skills">
-                <h3>Skills</h3>
-
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>Responsive Design</span>
-                <span>GitHub</span>
+    <!-- Experience -->
+    <section id="experience" class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Work Experience</h2>
+        
+        <div class="max-w-4xl mx-auto space-y-12">
+            <!-- Current -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">Full Stack Developer</h3>
+                        <p class="text-blue-600 font-medium">Orient Consultancy Services, Akurdi, Pune</p>
+                    </div>
+                    <div class="text-right text-sm">
+                        <span class="bg-green-100 text-green-700 px-4 py-1 rounded-3xl">Feb 2021 - Present</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex gap-3"><i class="fas fa-circle text-xs text-blue-500 mt-2"></i> Developing and maintaining full-stack web applications</li>
+                    <li class="flex gap-3"><i class="fas fa-circle text-xs text-blue-500 mt-2"></i> Working with PHP, JavaScript, ASP.NET, MySQL &amp; MSSQL</li>
+                    <li class="flex gap-3"><i class="fas fa-circle text-xs text-blue-500 mt-2"></i> Creating responsive designs and managing CMS platforms</li>
+                </ul>
             </div>
 
-            <button>Contact Me</button>
-
+            <!-- Previous -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">Web Designer</h3>
+                        <p class="text-blue-600 font-medium">R &amp; R Studio, Chinchwad, Pune</p>
+                    </div>
+                    <div class="text-right text-sm">
+                        <span class="bg-slate-100 px-4 py-1 rounded-3xl">Apr 2016 - Jan 2021</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex gap-3"><i class="fas fa-circle text-xs text-blue-500 mt-2"></i> Designed and developed websites using HTML, CSS, PHP</li>
+                    <li class="flex gap-3"><i class="fas fa-circle text-xs text-blue-500 mt-2"></i> Created graphics, layouts, and user interfaces</li>
+                    <li class="flex gap-3"><i class="fas fa-circle text-xs text-blue-500 mt-2"></i> Managed domain registration, hosting, and client handovers</li>
+                </ul>
+            </div>
         </div>
+    </section>
 
-    </div>
+    <!-- Projects -->
+    <section id="projects" class="bg-slate-100 py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Key Projects</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
+                    <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+                    <div class="p-8">
+                        <h3 class="font-semibold text-xl mb-1">Hotel Management System</h3>
+                        <p class="text-blue-600 text-sm mb-4">HTML, CSS, PHP, MySQL</p>
+                        <p class="text-slate-600">
+                            Comprehensive system managing front office, reservations, material and quality management. 
+                            Reduces manual workload significantly.
+                        </p>
+                    </div>
+                </div>
 
+                <!-- Project 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
+                    <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                    <div class="p-8">
+                        <h3 class="font-semibold text-xl mb-1">Assista Health System</h3>
+                        <p class="text-blue-600 text-sm mb-4">HTML, CSS, JavaScript, PHP, MySQL</p>
+                        <p class="text-slate-600">
+                            Multi-module healthcare management system for physicians, patients, pharmacy, diagnostics, and admin. 
+                            Centralized patient and medicine tracking.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
+                    <div class="h-2 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+                    <div class="p-8">
+                        <h3 class="font-semibold text-xl mb-1">Human Milk Bank Management</h3>
+                        <p class="text-blue-600 text-sm mb-4">HTML, CSS, JavaScript, ASP.NET, MSSQL</p>
+                        <p class="text-slate-600">
+                            End-to-end solution for milk collection, testing, distribution and equipment management for safe delivery to infants.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Education</h2>
+        
+        <div class="max-w-3xl mx-auto">
+            <table class="w-full">
+                <thead>
+                    <tr class="border-b">
+                        <th class="text-left py-4 font-medium">Degree</th>
+                        <th class="text-left py-4 font-medium">University / Board</th>
+                        <th class="text-center py-4 font-medium">Year</th>
+                        <th class="text-center py-4 font-medium">Percentage</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y">
+                    <tr>
+                        <td class="py-6 font-medium">B.C.A.</td>
+                        <td class="py-6">Aurangabad University</td>
+                        <td class="py-6 text-center">2014</td>
+                        <td class="py-6 text-center font-semibold">66.05%</td>
+                    </tr>
+                    <tr>
+                        <td class="py-6 font-medium">H.S.C.</td>
+                        <td class="py-6">Aurangabad Board</td>
+                        <td class="py-6 text-center">2009</td>
+                        <td class="py-6 text-center font-semibold">53.83%</td>
+                    </tr>
+                    <tr>
+                        <td class="py-6 font-medium">S.S.C.</td>
+                        <td class="py-6">Aurangabad Board</td>
+                        <td class="py-6 text-center">2007</td>
+                        <td class="py-6 text-center font-semibold">68.46%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Strengths -->
+    <section class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Strengths</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl">👥</div>
+                    <h4 class="font-semibold mb-2">Team Player</h4>
+                    <p class="text-slate-600">Excellent communication and collaboration skills</p>
+                </div>
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-amber-100 rounded-2xl flex items-center justify-center text-3xl">⚡</div>
+                    <h4 class="font-semibold mb-2">Quick Learner</h4>
+                    <p class="text-slate-600">Fast adaptability and strong problem-solving ability</p>
+                </div>
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-emerald-100 rounded-2xl flex items-center justify-center text-3xl">🎯</div>
+                    <h4 class="font-semibold mb-2">Result Oriented</h4>
+                    <p class="text-slate-600">High stress tolerance and dedication to quality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-slate-900 text-white py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-semibold heading-font mb-8">Let's Connect</h2>
+            <p class="text-xl text-slate-400 mb-10 max-w-md mx-auto">
+                Open to new opportunities and interesting projects
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="mailto:Satishpawar373@gmail.com" 
+                   class="flex items-center gap-3 bg-slate-800 hover:bg-slate-700 transition-colors px-8 py-4 rounded-3xl">
+                    <i class="fas fa-envelope text-2xl"></i>
+                    <div class="text-left">
+                        <p class="text-sm opacity-70">Email</p>
+                        <p>Satishpawar373@gmail.com</p>
+                    </div>
+                </a>
+                
+                <a href="tel:9850021435" 
+                   class="flex items-center gap-3 bg-slate-800 hover:bg-slate-700 transition-colors px-8 py-4 rounded-3xl">
+                    <i class="fas fa-phone text-2xl"></i>
+                    <div class="text-left">
+                        <p class="text-sm opacity-70">Phone</p>
+                        <p>+91 98500 21435</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mt-16 text-slate-500 text-sm">
+                Pune, Maharashtra • Indian National • DOB: 15 Jun 1991
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-400 py-8 text-center text-sm">
+        <p>© 2026 Pawar Satish Radhakisan. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Tailwind script already loaded via CDN
+    </script>
 </body>
 </html>
