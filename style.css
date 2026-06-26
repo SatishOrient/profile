@@ -1,0 +1,103 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f1f5f9;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.container{
+width:100%;
+display:flex;
+justify-content:center;
+}
+
+.card{
+background:white;
+width:350px;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:150px;
+height:150px;
+border-radius:50%;
+margin-bottom:15px;
+}
+
+h1{
+margin-bottom:10px;
+}
+
+.role{
+color:blue;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.about{
+color:gray;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.skills{
+margin-bottom:20px;
+}
+
+.skills span{
+display:inline-block;
+background:#e2e8f0;
+padding:8px 12px;
+margin:5px;
+border-radius:20px;
+}
+
+button{
+background:blue;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+transform:scale(1.05);
+transition:0.3s;
+}
+
+/* Tablet */
+@media screen and (max-width:768px){
+
+.card{
+width:300px;
+background:lightgreen;
+}
+
+}
+
+/* Mobile */
+@media screen and (max-width:480px){
+
+.card{
+width:100%;
+background:#ffb4b4;
+}
+
+h1{
+font-size:24px;
+}
+
+}
